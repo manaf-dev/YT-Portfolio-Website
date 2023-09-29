@@ -9,7 +9,7 @@
 /* similar styling content  */
 
 section{
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 .container{  
@@ -18,14 +18,6 @@ section{
   margin: auto;
 }
 
-/* section .title{
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
-} */
 
 .section-title {
   color: hsl(9, 100%, 62%);
@@ -167,6 +159,8 @@ nav li a:hover {
     width: 500px;
     height: 500px;
     object-fit: cover;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(13, 12, 12, 0.674);
 }
 
 .btn {
@@ -192,14 +186,9 @@ nav li a:hover {
 
 /* About styling */
 #about {
-  padding: 70px 70px 0 70px;
   min-height: 100vh;
 }
 
-/* .sec-title {
-  text-align: center;
-  margin-bottom: 20px;
-} */
 
 .about-content {
   display: flex;
@@ -237,7 +226,6 @@ nav li a:hover {
 
 /* Services styling */
 #services {
-  padding: 70px;
   background: hsl(192, 24%, 96%);
 }
 
