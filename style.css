@@ -1,0 +1,402 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+  font-size: 20px;
+}
+
+/* similar styling content  */
+
+section{
+  padding: 100px 0;
+}
+
+.container{  
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* section .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+} */
+
+.section-title {
+  color: hsl(9, 100%, 62%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 5px 20px;
+  background: hsla(9, 100%, 62%, 0.1);
+  width: max-content;
+  border-radius: 50px;
+  margin-inline: auto;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+
+/* End similar styling content  */
+
+.logo h3{
+    font-size: 40px;
+}
+
+.logo h3 span {
+  font-size: 40px;
+  color: hsl(9, 100%, 62%);
+}
+
+
+header {
+  padding: 20px 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
+}
+
+header .container {
+  padding: 0 50px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-weight: 600;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+nav li a:hover {
+    color: #fff;
+    background-color: hsl(9, 100%, 62%);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+#home {
+  padding-top: 200px;
+  height: 100vh;
+  background: hsl(192, 24%, 96%);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero-left {
+    flex: 1;
+    
+}
+
+.hero-subtitle {
+  color: rgb(1, 39, 1);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  padding: 10px 0 35px 0;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.hero-text {
+  color: hsl(200, 15%, 43%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-left: 15px;
+  border-left: 1px solid;
+  margin-bottom: 30px;
+}
+
+.hero-right {
+    flex: 1;
+    margin-left: 100px;
+}
+
+.hero-right img {
+    max-width: 100%;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.btn {
+    background-color: hsl(9, 100%, 62%);
+    border: 1px solid hsl(9, 100%, 62%);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.hero-btn {
+  border-radius: 40px;
+}
+
+.btn:hover {
+  color: hsl(9, 100%, 62%);
+  background: none;
+}
+
+
+/* About styling */
+#about {
+  padding: 70px 70px 0 70px;
+  min-height: 100vh;
+}
+
+/* .sec-title {
+  text-align: center;
+  margin-bottom: 20px;
+} */
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 50px;
+}
+
+.about-left {
+  text-align: justify;
+  margin-right: 100px;
+  padding-bottom: 50px;
+  flex: 1;
+}
+
+.about-left p {
+  margin-bottom: 50px;
+  padding-right: 80px;
+}
+
+.about-right {
+  margin-right: 1;
+}
+
+.about-right img {
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 45px;
+  box-shadow: 0 0 10px hsla(0, 0%, 12%, 0.574);
+}
+
+
+/* Services styling */
+#services {
+  padding: 70px;
+  background: hsl(192, 24%, 96%);
+}
+
+.services-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  position: relative;
+  padding: 40px 30px;
+  text-align: center;
+  background: hsl(0, 0%, 100%);
+}
+
+.service-card .card-icon {
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.service-card .icon img{
+  width: 70px;
+  height: 70px;
+}
+
+.service-card .card-text {
+  color: hsl(200, 15%, 43%);
+  font-size: 0.875rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.service-card .card-title {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+/* Contact styling */
+
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .contact-content .column{
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+  text-align: justify;
+}
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+.contact .contact-content .row i{
+  font-size: 25px;
+  color: crimson;
+}
+.contact .contact-content .info .head{
+  font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+  color: #333;
+}
+.contact .right form .fields{
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name{
+  margin-right: 10px;
+}
+.contact .right form .email{
+  margin-left: 10px;  
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+  border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button{
+  height: 47px;
+  width: 170px;
+}
+.contact .right form .button button{
+  width: 100%;
+  height: 100%;
+  border: 2px solid hsl(9, 100%, 62%);
+  background: hsl(9, 100%, 62%);
+  color: #fff;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+  color: hsl(9, 100%, 62%);
+  background: none;
+}
+
+
+
+/* Footer styling */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: hsl(229, 17%, 19%);
+  color: white;
+}
+
+footer a {
+  color: hsl(9, 100%, 62%);
+  font-weight: 500;
+}
