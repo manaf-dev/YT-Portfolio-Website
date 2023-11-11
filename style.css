@@ -118,7 +118,7 @@ nav li a:hover {
 .hero-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 500px;
 }
@@ -158,7 +158,8 @@ nav li a:hover {
     width: 100%;
     width: 600px;
     height: 600px;
-    object-fit: cover;
+    object-fit: contain;
+
 /*    border: 1px solid black;*/
     /*border-radius: 7px;
     box-shadow: 0 0 10px rgba(13, 12, 12, 0.674);*/
@@ -405,6 +406,20 @@ footer a {
   * {
       font-size: 18px;
     }
+
+
+    .navbar-right, .navbar-left {
+      display: none;
+    }
+
+
+
+
+
+
+
+
+
 
   .section-title {
     color: hsl(9, 100%, 62%);
