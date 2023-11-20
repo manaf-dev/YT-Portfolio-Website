@@ -2,11 +2,39 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "poppins";
+  font-family: 'poppins', sans-serif;
   font-size: 20px;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* similar styling content  */
+
+.btn {
+    background-color: #7D141D;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 40px;
+}
+
+.btn:hover {
+  color: #7D141D;
+  background: #fff;
+  border: 1px solid #7D141D;
+}
+
 
 section{
   padding: 70px 0;
@@ -20,11 +48,11 @@ section{
 
 
 .section-title {
-  color: hsl(9, 100%, 62%);
+  color: #FF1E27;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 5px 20px;
-  background: hsla(9, 100%, 62%, 0.1);
+  background: rgba(255, 30, 37, 0.1);
   width: max-content;
   border-radius: 50px;
   margin-inline: auto;
@@ -40,17 +68,9 @@ section{
 /* End similar styling content  */
 
 
-.logo h3{
-    font-size: 40px;
-}
-
-.logo h3 span {
-  font-size: 40px;
-  color: hsl(9, 100%, 62%);
-}
-
 
 header {
+  height: 70px;
   padding: 20px 0;
   position: fixed;
   z-index: 9999;
@@ -59,55 +79,85 @@ header {
   box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
 }
 
-header .container {
-  padding: 0 50px;
-}
-
 .navbar {
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.navbar-left-list {
+
+.navbar .logo h3{
+    font-size: 2rem;
+    color: #7D141D;
+}
+
+
+
+.navbar-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 50px;
   font-weight: 600;
 }
 
-
 .navbar a {
-  text-decoration: none;
   color: black;
 }
 
-li {
-  list-style: none;
+
+.navbar li a:hover {
+    color: hsl(9, 100%, 62%);
 }
 
-nav li a:hover {
-    color: #fff;
-    background-color: hsl(9, 100%, 62%);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.navbar-right {
+.navbar-socials {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
-.icon img{
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+.navbar .toggle_btn {
+  cursor: pointer;
+  display: none;
 }
 
+.toggle_btn > img {
+  height: 30px;
+  width: 30px;
+}
+
+.hamburger_menu {
+  display: none;
+  position: absolute;
+  right: 80px;
+  width: 300px;
+  height: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bazier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hamburger_menu.open {
+  height: 190px;
+}
+
+.hamburger_menu li {
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger_menu li a {
+  font-weight: 700;
+}
+
+.hamburger_menu li a:hover {
+    color: hsl(9, 100%, 62%);
+}
+
+
+
+/* HERO STYLE */
 
 .hero {
   padding-top: 200px;
@@ -117,10 +167,8 @@ nav li a:hover {
 
 .hero-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 500px;
 }
 
 .hero-subtitle {
@@ -145,48 +193,27 @@ nav li a:hover {
   margin-bottom: 30px;
 }
 
-.hero-left {
-    flex: 1;
-    
-}
 
-.hero-right {
-    flex: 1;
-}
 
 .hero-right img {
     width: 100%;
     width: 600px;
     height: 600px;
     object-fit: contain;
-
-/*    border: 1px solid black;*/
-    /*border-radius: 7px;
-    box-shadow: 0 0 10px rgba(13, 12, 12, 0.674);*/
 }
 
-.btn {
-    background-color: hsl(9, 100%, 62%);
-    border: 1px solid hsl(9, 100%, 62%);
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
+
+
+
+.hero-socials {
+  display: none;
 }
 
-.hero-btn {
-  border-radius: 40px;
-}
 
-.btn:hover {
-  color: hsl(9, 100%, 62%);
-  background: none;
-}
 
 
 /* About styling */
+
 .about {
   min-height: 100vh;
 }
@@ -223,14 +250,16 @@ nav li a:hover {
   width: 400px;
   height: 400px;
   object-fit: cover;
-/*  border-radius: 45px;*/
+  border-radius: 50%;
+  background-color: gray;
   box-shadow: 0 0 10px hsla(0, 0%, 12%, 0.574);
 }
 
 .about-btn {
-  margin-top: -100px;
-  padding-top: -20px;
+  margin-top: -200px;
 }
+
+
 
 
 /* Services styling */
@@ -250,6 +279,12 @@ nav li a:hover {
   padding: 40px 30px;
   text-align: center;
   background: hsl(0, 0%, 100%);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.service-card:hover {
+  box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
 }
 
 .service-card .card-icon {
@@ -268,6 +303,7 @@ nav li a:hover {
   font-size: 0.875rem;
   line-height: 1.8;
   margin-bottom: 25px;
+  text-align: justify;
 }
 
 .service-card .card-title {
@@ -290,54 +326,63 @@ nav li a:hover {
 .contact .contact-content .column{
   width: calc(50% - 30px);
 }
+
 .contact .contact-content .text{
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .contact .contact-content .left p{
   text-align: justify;
+  line-height: 25px;
 }
+
 .contact .contact-content .left .icons{
   margin: 10px 0;
 }
+
 .contact .contact-content .row{
   display: flex;
   height: 65px;
   align-items: center;
 }
+
 .contact .contact-content .row .info{
   margin-left: 30px;
 }
-.contact .contact-content .row i{
-  font-size: 25px;
-  color: crimson;
-}
+
 .contact .contact-content .info .head{
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: bold;
 }
-.contact .contact-content .info .sub-title{
-  color: #333;
-}
+
+
+
 .contact .right form .fields{
   display: flex;
 }
+
 .contact .right form .field,
 .contact .right form .fields .field{
   height: 45px;
   width: 100%;
   margin-bottom: 15px;
 }
+
 .contact .right form .textarea{
   height: 80px;
   width: 100%;
 }
+
 .contact .right form .name{
   margin-right: 10px;
 }
+
 .contact .right form .email{
   margin-left: 10px;  
 }
+
 .contact .right form .field input,
 .contact .right form .textarea textarea{
   height: 100%;
@@ -350,35 +395,19 @@ nav li a:hover {
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
 }
+
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
   border-color: #b3b3b3;
 }
+
 .contact .right form .textarea textarea{
   padding-top: 10px;
   resize: none;
 }
-.contact .right form .button{
-  height: 47px;
-  width: 170px;
-}
-.contact .right form .button button{
-  width: 100%;
-  height: 100%;
-  border: 2px solid hsl(9, 100%, 62%);
-  background: hsl(9, 100%, 62%);
-  color: #fff;
-  outline: none;
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.contact .right form .button button:hover{
-  color: hsl(9, 100%, 62%);
-  background: none;
-}
+
+
+
 
 
 
@@ -401,6 +430,8 @@ footer a {
 
 
 
+/* MOBILE RESPONSIVE */
+
 @media (max-width: 480px) {
 
   * {
@@ -408,17 +439,17 @@ footer a {
     }
 
 
-    .navbar-right, .navbar-left {
+    .navbar-socials, .navbar-links {
       display: none;
     }
 
+    .hamburger_menu {
+      display: block;
+    }
 
-
-
-
-
-
-
+    .navbar .toggle_btn {
+      display: block;
+    }
 
 
   .section-title {
@@ -465,7 +496,7 @@ footer a {
 
   .hero-text {
     color: hsl(200, 15%, 43%);
-    font-size: 0.65rem;
+/*    font-size: 0.65rem;*/
     line-height: 1.5;
     padding-left: 15px;
     border-left: 1px solid;
@@ -474,6 +505,26 @@ footer a {
 
   .hero-right {
     display: none;
+  }
+
+  .hero-contact {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .hero-socials {
+    display: flex;
+    align-items: center;
+/*    flex-direction: row;*/
+    gap: 1rem;
+    margin-left: 2rem;
+    padding-top: 5px;
+  }
+
+  .hero-socials li img {
+    height: 20px;
+    width: 20px;
   }
 
 
@@ -504,6 +555,8 @@ footer a {
   .about-right img {
     width: 300px;
     height: 300px;
+    /*border-radius: 50%;
+    background-color: gray;*/
     margin-top: -20px;
   }
 
@@ -517,9 +570,9 @@ footer a {
     flex-direction: column;
   }
 
-  .service-card .card-text {
+  /*.service-card .card-text {
     font-size: 0.75rem;
-  }
+  }*/
 
   .service-card .card-title {
     font-size: 0.9rem;
@@ -541,16 +594,9 @@ footer a {
     margin-bottom: 10px;
   }
 
-  .contact .contact-content .row i{
-    font-size: 20px;
-  }
 
-  .contact .right form .button button{
-    border: 1px solid hsl(9, 100%, 62%);
-    font-size: 17px;
-    font-weight: 300;
-  }
 
+ 
 
   footer{
     padding: 0.8rem 2rem;

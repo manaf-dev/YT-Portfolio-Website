@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <title>Responsive navbar</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Manaf Dev</a></div>
+            <ul class="links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#hero">About</a></li>
+                <li><a href="#hero">Services</a></li>
+                <li><a href="#hero">Contact</a></li>
+            </ul>
+            <ul class="socials">
+                <li><a href=""><img src="imgs/github.svg"></a>
+                <li><a href=""><img src="imgs/facebook.svg"></a>
+                <li><a href=""><img src="imgs/instagram.svg"></a>
+                <li><a href=""><img src="imgs/twitter-x.svg"></a>
+            </ul>
+            <div class="toggle_btn">
+                <img src="imgs/bars-solid-white.svg">
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#hero">About</a></li>
+            <li><a href="#hero">Services</a></li>
+            <li><a href="#hero">Contact</a></li>
+            <li>
+                <div class="social_media">Socials</div>
+
+            </li>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+       const toggleBtn = document.querySelector('.toggle_btn') 
+       const toggleBtnIcon = document.querySelector('.toggle_btn img')
+       const dropDownMenu = document.querySelector('.dropdown_menu')
+
+       toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+
+       }
+    </script>
+</body>
+</html>
