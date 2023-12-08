@@ -1,9 +1,9 @@
-const toggleBtn = document.querySelector('.toggle_btn') 
-const toggleBtnIcon = document.querySelector('.toggle_btn img')
-const dropDownMenu = document.querySelector('.hamburger_menu')
+const hamburger = document.querySelector(".toggle_btn");
+const navMenu = document.querySelector(".navbar-links");
 
-toggleBtn.onclick = function () {
- dropDownMenu.classList.toggle('open')
- const isOpen = dropDownMenu.classList.contains('open')
+hamburger.addEventListener("click", mobileMenu);
 
- toggleBtnIcon.classList = isOpen
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
