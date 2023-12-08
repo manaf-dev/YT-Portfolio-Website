@@ -88,12 +88,10 @@ header {
   justify-content: space-between;
 }
 
-
 .navbar .logo h3{
     font-size: 2rem;
     color: #7D141D;
 }
-
 
 
 .navbar-links {
@@ -106,8 +104,7 @@ header {
   color: black;
 }
 
-
-.navbar li a:hover {
+.navbar a:hover {
     color: hsl(9, 100%, 62%);
 }
 
@@ -116,53 +113,71 @@ header {
     gap: 1rem;
 }
 
-.navbar .toggle_btn {
-  cursor: pointer;
-  display: none;
+.hamburger{
+  position:relative;
+  display:none;
+  width:35px;
+  cursor:pointer;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background:none;
+  outline:none;
+  border:none
 }
-
-
-.navbar .toggle_btn .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
+.hamburger .bar,.hamburger:after,.hamburger:before{
+  content:'';
+  display:block;
+  width:100%;
+  height:5px;
+  background-color:#000;
+  margin:6px 0px;
+  -webkit-transition:0.4s;
+  transition:0.4s
+}
+.hamburger.is-active:before{
+  -webkit-transform:rotate(-45deg) translate(-8px, 6px);
+  transform:rotate(-45deg) translate(-8px, 6px)
+}
+.hamburger.is-active:after{
+  -webkit-transform:rotate(45deg) translate(-9px, -8px);
+  transform:rotate(45deg) translate(-9px, -8px)
+}
+.hamburger.is-active .bar{
+  opacity:0
 }
 
 .hamburger_menu {
-  display: none;
-  position: absolute;
-  right: 80px;
-  width: 300px;
-  height: 0;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(1px);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: height 0.2s cubic-bazier(0.175, 0.885, 0.32, 1.275);
+  position:fixed;
+  top:0;
+  left:100%;
+  width:80%;
+  min-height:40vh;
+  display:none;
+  z-index:98;
+  background-color:#12002F;
+  padding-top:20px;
+  margin-top: 70px;
+  -webkit-transition:0.4s;
+  transition:0.4s
 }
-
-/*.hamburger_menu.open {
-  height: 190px;
+.hamburger_menu.is-active{
+  left: 0;
 }
-
-.hamburger_menu li {
-  padding: 0.7rem;
-  display: flex;
-  justify-content: center;
+.hamburger_menu a{
+  display:block;
+  width:100%;
+  max-width:200px;
+  margin:0 auto 16px;
+  text-align:center;
+  padding:12px 16px;
+  background-color:#1f103F;
+  color:#FFF;
+  text-decoration:none
 }
-
-.hamburger_menu li a {
-  font-weight: 700;
+.hamburger_menu a:hover{
+  background-color:#24104f
 }
-
-.hamburger_menu li a:hover {
-    color: hsl(9, 100%, 62%);
-}
-*/
 
 
 /* HERO STYLE */
@@ -414,10 +429,6 @@ header {
 }
 
 
-
-
-
-
 /* Footer styling */
 footer{
   display: flex;
@@ -455,7 +466,11 @@ footer a {
       display: none;
     }
 
-    .navbar .toggle_btn {
+    .hamburger {
+      display: block;
+    }
+
+    .hamburger_menu {
       display: block;
     }
 
@@ -465,60 +480,8 @@ footer a {
       font-size: 14px;
     }
 
-    
-
     .navbar-socials {
       display: none;
-    }
-
-
-    .hamburger_menu {
-      position: fixed;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: #fff;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-
-     /* display: none;
-      position: absolute;
-      right: 80px;
-      width: 300px;
-      height: 0;
-      background: rgba(0, 0, 0, 0.9);
-      backdrop-filter: blur(1px);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: height 0.2s cubic-bazier(0.175, 0.885, 0.32, 1.275);*/
-    }
-
-    .hamburger_menu.active {
-        left: 0;
-    }
-
-    .hamburger_menu li {
-        margin: 2.5rem 0;
-    }
-
-
-    .navbar .toggle_btn {
-      display: block;
-    }
-
-    .toggle_btn.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .toggle_btn.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .toggle_btn.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
     }
 
 
@@ -559,10 +522,6 @@ footer a {
   }
 
 
-
-
-
-
   .hero-title {
     padding: 30px 0 35px 0;
     font-size: 35px;
@@ -586,7 +545,6 @@ footer a {
   }
 
   
-
   .hero-right img {
     margin-top: 2rem;
     width: 100%;
@@ -612,7 +570,6 @@ footer a {
     height: 20px;
     width: 20px;
   }
-
 
 
   .about-content {
@@ -681,7 +638,6 @@ footer a {
   }
 
 
-
   footer{
     padding: 0.8rem 2rem;
     width: 100%;
@@ -711,7 +667,11 @@ footer a {
     display: none;
   }
 
-  .navbar .toggle_btn {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger_menu {
     display: block;
   }
 
