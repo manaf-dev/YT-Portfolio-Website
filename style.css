@@ -169,7 +169,7 @@ header {
 
 .hero {
   padding-top: 200px;
-  height: 100vh;
+/*  height: 100vh;*/
   background: hsl(192, 24%, 96%);
 }
 
@@ -222,9 +222,9 @@ header {
 
 /* About styling */
 
-.about {
+/*.about {
   min-height: 100vh;
-}
+}*/
 
 
 .about-content {
