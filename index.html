@@ -12,50 +12,44 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="">
-                        <h3><span>Port</span>foLio</h3>
+                        <h3>PortfoLio</h3>
                     </a>
                 </div>
-                <div class="navbar-left">
-                    <ul class="navbar-left-list">
-                        <li>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about_sec">About</a>
-                        </li>
-                        <li>
-                            <a href="#services_sec">Services</a>
-                        </li>
-                        <li>
-                            <a href="#contact_sec">Contact</a>
-                        </li>
+                
+                    <ul class="navbar-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about_sec">About</a></li>
+                        <li><a href="#services_sec">Services</a></li>
+                        <li><a href="#contact_sec">Contact</a></li>
                     </ul>
-                </div>
 
-                <div class="navbar-right">
-                    <div class="icon">
-                        <a href="">
-                            <img src="imgs/github.svg">
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="">
-                            <img src="imgs/facebook.svg">
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="">
-                            <img src="imgs/instagram.svg">
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="">
-                            <img src="imgs/twitter-x.svg">
-                        </a>
-                    </div>
+                <ul class="navbar-socials">
+                    <li><a href=""><img src="imgs/github.svg"></a>
+                    <li><a href=""><img src="imgs/facebook.svg"></a>
+                    <li><a href=""><img src="imgs/instagram.svg"></a>
+                    <li><a href=""><img src="imgs/twitter-x.svg"></a>
+                </ul>
+
+                <div class="toggle_btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
                 
             </nav>
+
+            <!-- <div class="hamburger-bars">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div> -->
+
+            <div class="hamburger_menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about_sec">About</a></li>
+                <li><a href="#services_sec">Services</a></li>
+                <li><a href="#contact_sec">Contact</a></li>
+            </div>
         </div>
     </header>
 
@@ -71,13 +65,21 @@
                         <h2 class="hero-title">Deenullah Ibn Ashir</h2>
             
                         <p class="hero-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore.
                         </p>
-            
-                        <button class="btn hero-btn">Contact Me</button>
+                        <div class="hero-contact">
+                            <button class="btn hero-btn">Message me</button>
+                            <ul class="hero-socials">
+                                <li><a href=""><img src="imgs/github.svg"></a>
+                                <li><a href=""><img src="imgs/facebook.svg"></a>
+                                <li><a href=""><img src="imgs/instagram.svg"></a>
+                                <li><a href=""><img src="imgs/twitter-x.svg"></a>
+                            </ul>
+                        </div>
                     </div>
+
                     <div class="hero-right">
-                        <img src="imgs/deen.jpg" alt="Deen-img">
+                        <img src="imgs/comp-user.png" alt="Deen-img">
                     </div>
                 </div>
             </div>
@@ -95,13 +97,17 @@
                             Ipsa quasi a architecto libero explicabo ratione nemo perspiciatis 
                             inventore cupiditate id iure accusantium ducimus quis, illo et maxime. 
                             A, tempora quaerat.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Ipsa quasi a architecto libero explicabo ratione nemo perspiciatis 
+                            inventore cupiditate id iure accusantium ducimus quis, illo et maxime. 
+                            A, tempora quaerat.
                         </p>
-                        <button class="btn about-btn">Download CV</button>
                     </div>
                     <div class="about-right">
-                        <img src="imgs/deen.jpg" alt="">
-                    </div>
+                        <img src="imgs/deen-rem.png" alt="">
+                    </div>                        
                 </div>
+                <button type="submit" class="btn about-btn">Download CV</button>
             </div>
         </section>
 
@@ -111,8 +117,7 @@
                 <p class="section-title">Services</p>
                 <h2 class="section-subtitle">Services I provide with deligent.</h2>
                 <ul class="services-list">
-                    <li>
-                        <div class="service-card">
+                    <li class="service-card">
                             <div class="card-icon icon">
                                 <img src="imgs/serv1.png" alt="Service icon">
                             </div>
@@ -128,12 +133,9 @@
                             <a href="#" class="card-link">
                                 <span>Find Service</span>
                             </a>
-
-                        </div>
                     </li>
 
-                    <li>
-                        <div class="service-card">
+                    <li class="service-card">
                             <div class="card-icon icon">
                                 <img src="imgs/serv2.jpg" alt="Service icon">
                             </div>
@@ -149,12 +151,9 @@
                             <a href="#" class="card-link">
                                 <span>Find Service</span>
                             </a>
-
-                        </div>
                     </li>
 
-                    <li>
-                        <div class="service-card">
+                    <li class="service-card">
                             <div class="card-icon icon">
                                 <img src="imgs/serv3.jpg" alt="Service icon">
                             </div>
@@ -170,8 +169,6 @@
                             <a href="#" class="card-link">
                                 <span>Find Service</span>
                             </a>
-
-                        </div>
                     </li>
 
                 </ul>
@@ -184,6 +181,7 @@
             <div class="container">
                 <p class="section-title">Contact me</p>
                 <h2 class="section-subtitle">How you can find me.</h2>
+                
                 <div class="contact-content">
                     <div class="column left">
                         <div class="text">Get in Touch</div>
@@ -227,10 +225,10 @@
                                 <input type="text" placeholder="Subject" required>
                             </div>
                             <div class="field textarea">
-                                <textarea cols="30" rows="10" placeholder="Message..." required></textarea>
+                                <textarea cols="30" rows="5" placeholder="Message..." required></textarea>
                             </div>
-                            <div class="button">
-                                <button type="submit">Send message</button>
+                            <div>
+                                <button type="submit" class="btn">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -242,8 +240,24 @@
             <div>
                <p>&copy; 2023 Designed by <a href="">Tech Rems</a></p>
             </div>
-            </footer>
+        </footer>
 
     </main>
+
+
+    <!-- <script type="text/javascript">
+       const toggleBtn = document.querySelector('.toggle_btn') 
+       const toggleBtnIcon = document.querySelector('.toggle_btn')
+       const dropDownMenu = document.querySelector('.hamburger_menu')
+
+       toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+
+       }
+    </script> -->
+    <script src="scripts.js"></script> 
 </body>
 </html>
