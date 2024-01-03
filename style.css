@@ -59,6 +59,11 @@ a {
   font-size: 1.5rem;
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 
 /* End similar styling content  */
@@ -106,83 +111,11 @@ header {
     color: #ff5a3d;
 }
 
-.navbar-socials {
-    display: flex;
-    gap: 1rem;
+.hamburger {
+  display: none;
 }
 
-.hamburger{
-  position:relative;
-  display:none;
-  width:35px;
-  cursor:pointer;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  background:none;
-  outline:none;
-  border:none
-}
 
-.hamburger .bar,.hamburger:after,.hamburger:before{
-  content:'';
-  display:block;
-  width:100%;
-  height:3px;
-  background-color:#000;
-  margin:6px 0px;
-  -webkit-transition:0.4s;
-  transition:0.4s
-}
-
-.hamburger.is-active:before{
-  -webkit-transform:rotate(-45deg) translate(-7px, 4px);
-  transform:rotate(-45deg) translate(-7px, 4px)
-}
-
-.hamburger.is-active:after{
-  -webkit-transform:rotate(45deg) translate(-8px, -6px);
-  transform:rotate(45deg) translate(-8px, -6px)
-}
-
-.hamburger.is-active .bar{
-  opacity:0
-}
-
-.hamburger_menu {
-  position:fixed;
-  top:0;
-  left:100%;
-  width:100%;
-  display:none;
-  z-index:0;
-  background-color: rgba(0, 0, 10, 0.7);
-  margin-top:70px;
-  -webkit-transition:0.4s;
-  transition:0.4s
-}
-
-.hamburger_menu.is-active{
-   left: 0;
-}
-
-.hamburger_menu a{
-  display:block;
-  width:30%;
-  max-width:200px;
-  margin: 10px auto;
-  text-align:center;
-  padding: 10px 5px;
-  color:#FFF;
-  text-decoration:none;
-  font-weight: 600;
-  font-size: 20px;
-  border-radius: 50px;
-}
-
-.hamburger_menu a.active, .hamburger_menu a:hover{
-  color:#ff5a3d;
-}
 
 
 /* HERO STYLE */
@@ -232,8 +165,9 @@ header {
 }
 
 
-.hero-socials {
+.hero-contact .hero-socials {
   display: none;
+  padding-top: 10px;
 }
 
 
@@ -450,13 +384,83 @@ footer a {
       padding: 10px 50px;
     }
 
-   .navbar-socials, .navbar-links {
+   .navbar-socials {
       display: none;
     }
 
-    .hamburger, .hamburger_menu {
-      display: block;
+
+    .hamburger{
+      position:relative;
+      /* display:none; */
+      width:35px;
+      cursor:pointer;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+      background:none;
+      outline:none;
+      border:none
     }
+    
+    .hamburger .bar,.hamburger:after,.hamburger:before{
+      content:'';
+      display:block;
+      width:100%;
+      height:3px;
+      background-color:#000;
+      margin:6px 0px;
+      -webkit-transition:0.4s;
+      transition:0.4s
+    }
+    
+    .hamburger.is-active:before{
+      -webkit-transform:rotate(-45deg) translate(-7px, 4px);
+      transform:rotate(-45deg) translate(-7px, 4px)
+    }
+    
+    .hamburger.is-active:after{
+      -webkit-transform:rotate(45deg) translate(-8px, -6px);
+      transform:rotate(45deg) translate(-8px, -6px)
+    }
+    
+    .hamburger.is-active .bar{
+      opacity:0
+    }
+    
+    .navbar-links {
+      flex-direction: column;
+      gap: 20px;
+      position:fixed;
+      top:0;
+      left:100%;
+      width:100%;
+      z-index:0;
+      background-color: rgba(0, 0, 10, 0.7);
+      margin-top:70px;
+      padding: 20px 0;
+      -webkit-transition:0.4s;
+      transition:0.4s
+    }
+    
+    .navbar-links.is-active{
+       left: 0;
+    }
+    
+    .navbar-links a{
+      margin: 0 auto;
+      width: 30%;
+      text-align:center;
+      color:#FFF;
+    }
+    
+    .navbar-links a.active, .navbar-links a:hover{
+      color:#ff5a3d;
+    }
+    
+
+    /* .hamburger, .hamburger_menu {
+      display: block;
+    } */
 
 
   .section-title {
@@ -492,9 +496,6 @@ footer a {
 
   .hero-contact .hero-socials {
     display: flex;
-    align-items: center;
-    padding-top: 10px;
-    gap: 1rem;    
   }
 
 
@@ -554,22 +555,15 @@ footer a {
     padding: 70px;
   }
 
+  header {
+    padding: 10px 50px;
+  }
 
-  .navbar-socials, .navbar-links {
+
+
+
+  .navbar-socials, .hamburger{
     display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger_menu.is-active {
-    left: 20%;
-  }
-
-  .hamburger_menu {
-    display: block;
-    width: 70%;
   }
 
   .hero-content {
@@ -589,9 +583,6 @@ footer a {
 
   .hero-contact .hero-socials {
     display: flex;
-    align-items: center;
-    padding-top: 10px;
-    gap: 1rem;    
   }
 
 
