@@ -107,7 +107,7 @@ header {
   color: black;
 }
 
-.navbar a:hover {
+.navbar .navbar-links a:hover {
     color: #ff5a3d;
 }
 
@@ -125,7 +125,7 @@ header {
 }
 
 .hero-content {
-  padding-top: 150px;
+  padding-top: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +139,7 @@ header {
 
 .hero-title {
   padding-top: 10px;
-  padding-bottom: 35px;
+  padding-bottom: 20px;
   font-size: 60px;
 }
 
@@ -199,6 +199,7 @@ header {
   height: 400px;
   object-fit: cover;
   border-radius: 50%;
+  border: 2px solid #7D141D;
   background-color: gray;
   box-shadow: 0 0 10px #1f1f1f92;
 }
@@ -391,15 +392,9 @@ footer a {
 
     .hamburger{
       position:relative;
-      /* display:none; */
+      display:block;
       width:35px;
       cursor:pointer;
-      -webkit-appearance:none;
-      -moz-appearance:none;
-      appearance:none;
-      background:none;
-      outline:none;
-      border:none
     }
     
     .hamburger .bar,.hamburger:after,.hamburger:before{
@@ -427,13 +422,14 @@ footer a {
       opacity:0
     }
     
-    .navbar-links {
+    .hamburger_menu {
       flex-direction: column;
+      text-align: center;
       gap: 20px;
       position:fixed;
       top:0;
       left:100%;
-      width:100%;
+      width:70%;
       z-index:0;
       background-color: rgba(0, 0, 10, 0.7);
       margin-top:70px;
@@ -442,25 +438,21 @@ footer a {
       transition:0.4s
     }
     
-    .navbar-links.is-active{
-       left: 0;
+    .hamburger_menu.is-active{
+       left: 30%;
     }
     
-    .navbar-links a{
+    .hamburger_menu a{
       margin: 0 auto;
       width: 30%;
       text-align:center;
       color:#FFF;
     }
     
-    .navbar-links a.active, .navbar-links a:hover{
+    .hamburger_menu a.active, .hamburger_menu a:hover{
       color:#ff5a3d;
     }
     
-
-    /* .hamburger, .hamburger_menu {
-      display: block;
-    } */
 
 
   .section-title {
@@ -560,20 +552,19 @@ footer a {
   }
 
 
-
-
-  .navbar-socials, .hamburger{
+  .navbar-socials{
     display: none;
   }
 
   .hero-content {
     padding-top: 100px;
-    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: flex-start;
   }
 
 
   .hero-title {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .hero-subtitle {
@@ -588,8 +579,8 @@ footer a {
 
   .hero-right img {
     margin-top: 2rem;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
  
   .about-content {
